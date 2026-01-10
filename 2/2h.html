@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>2h</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      // was supposed to do this exercise without using ternary
+      function ProductDetails({ title, price, discountedPrice }) {
+        if (discountedPrice) {
+          <p>Discounted Price = </p>;
+        }
+        return (
+          <>
+            <p>......................</p>
+            <p>{title}</p>
+            {discountedPrice ? (
+              <del>
+                <p>Price: {price}</p>
+              </del>
+            ) : (
+              <p>Price: {price}</p>
+            )}
+            {discountedPrice && <p>Discounted Price: ${discountedPrice}</p>}
+            <button>Add to Cart</button>
+          </>
+        );
+      }
+
+      function App() {
+        return (
+          <>
+            <ProductDetails title="Cotton socks" price="$10.90" />
+            <ProductDetails title="Tennis balls" price="$6.00" />
+            <ProductDetails
+              title="Plain T-Shirt"
+              price="$7.99"
+              discountedPrice="10"
+            />
+          </>
+        );
+      }
+
+      const container = document.querySelector(".js-container");
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>

@@ -10,14 +10,22 @@
     <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
+
+      function LoginForm()
+      {
+        return(<>
+        <div><input placeholder="Email" size="30" /></div>
+            <div><input placeholder="Password" size="30" type="password" /></div>
+            <button>Login</button>
+            <button>Sign up</button>
+        </>
+        );
+      }
       function App() {
         return (
           <>
+            <LoginForm/>
             <p>Hello, welcome to my website</p>
-            <div><input placeholder="Email" size="30" /></div>
-            <div><input placeholder="Password" size="30" /></div>
-            <button>Login</button>
-            <button>Sign up</button>
           </>
         );
       }
