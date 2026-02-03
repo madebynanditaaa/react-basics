@@ -1,0 +1,11 @@
+.on {
+  background-color: rgb(25,135,84);
+  border: none;
+  border-radius: 20px;
+}
+
+.off {
+  background-color: rgb(220,53,69);
+  border: none;
+  border-radius: 20px;
+}

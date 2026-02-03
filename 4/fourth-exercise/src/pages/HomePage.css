@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login {
+  background-color: rgb(0, 123, 255);
+  border: none;
+  border-radius: 5px;
+  width: 60px;
+  font-size: 9px;
+  height: 30px;
+  color: white;
+}
+
+.signup {
+  background-color: rgb(0, 123, 255);
+  border: none;
+  border-radius: 5px;
+  width: 60px;
+  font-size: 10px;
+  color: white;
+  height: 30px;
+}
+
+.email {
+  width: 150px;
+}
+.password {
+  width: 150px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.hide{
+gap: 12px;;
+}
