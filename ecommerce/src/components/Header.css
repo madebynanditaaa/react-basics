@@ -1,109 +1,149 @@
-.checkout-header {
-  height: 60px;
-  padding-left: 30px;
-  padding-right: 30px;
-  background-color: white;
+.header {
+  background-color: rgb(8, 79, 45);
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
 
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
 
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  height: 60px;
 }
 
-.checkout-header .header-content {
-  width: 100%;
-  max-width: 1100px;
-
-  display: flex;
-  align-items: center;
+.header .left-section {
+  width: 208px;
 }
 
-.checkout-header .checkout-header-left-section {
-  width: 200px;
+@media (max-width: 800px) {
+  .header .left-section {
+    width: unset;
+  }
 }
 
-.checkout-header .logo {
+.header .header-link {
+  display: inline-block;
+  padding: 6px 9.5px;
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.header .header-link:hover {
+  border: 1px solid white;
+}
+
+.header .logo {
   height: 26px;
-  margin-top: 0px;
+  margin-top: 1px;
 }
 
-.checkout-header .mobile-logo {
+.header .mobile-logo {
   display: none;
 }
 
-/* @media is used to create responsive design (making the
-   website look good on any screen size). This @media
-   means when the screen width is 575px or less, different
-   styles (inside the {...}) will be applied. */
-@media (max-width: 575px) {
-  .checkout-header .checkout-header-left-section {
-    width: auto;
-  }
-
-  .checkout-header .logo {
+@media (max-width: 675px) {
+  .header .logo {
     display: none;
   }
 
-  .checkout-header .mobile-logo {
-    display: inline-block;
+  .header .mobile-logo {
+    display: block;
     height: 26px;
+    margin-top: 1px;
   }
 }
 
-.checkout-header .checkout-header-middle-section {
+.header .middle-section {
   flex: 1;
+  max-width: 850px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+}
+
+.header .search-bar {
+  flex: 1;
+  width: 0;
+  font-size: 16px;
+  height: 38px;
+  padding-left: 15px;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.header .search-button {
+  background-color: rgb(186, 255, 190);
+  border: none;
+  width: 45px;
+  height: 40px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   flex-shrink: 0;
-  text-align: center;
+}
 
-  font-size: 22px;
-  font-weight: 500;
+.header .search-icon {
+  height: 20px;
+  margin-left: 0px;
+  margin-top: 3px;
+}
 
+.header .right-section {
+  width: 180px;
+  flex-shrink: 0;
   display: flex;
-  justify-content: center;
-}
-
-.checkout-header .return-to-home-link {
-  color: rgb(25, 135, 84);
-
-  text-decoration: none;
-  cursor: pointer;
-}
-
-@media (max-width: 1000px) {
-  .checkout-header .checkout-header-middle-section {
-    font-size: 20px;
-    margin-right: 60px;
-  }
-
-  .checkout-header .return-to-home-link {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 575px) {
-  .checkout-header .checkout-header-middle-section {
-    margin-right: 5px;
-  }
-}
-
-.checkout-header .checkout-header-right-section {
-  text-align: right;
-  width: 200px;
-  display: flex;
-  align-items: center;
   justify-content: end;
 }
 
-.checkout-header .checkout-header-right-section img {
-  height: 32px;
+.header .orders-link {
+  color: white;
+
+  display: flex;
+  align-items: center;
+  padding-left: 13px;
+  padding-right: 13px;
 }
 
-@media (max-width: 1000px) {
-  .checkout-header .checkout-header-right-section {
-    width: auto;
-  }
+.header .orders-text {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.header .cart-link {
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.header .cart-icon {
+  width: 38px;
+}
+
+.header .cart-text {
+  margin-left: 5px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.header .cart-quantity {
+  color: rgb(8, 79, 45);
+  font-size: 14px;
+  font-weight: 700;
+
+  position: absolute;
+  top: 8.5px;
+  right: 46px;
+
+  width: 26px;
+  text-align: center;
 }
